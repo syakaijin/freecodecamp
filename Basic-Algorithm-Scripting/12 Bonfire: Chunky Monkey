@@ -1,0 +1,12 @@
+function chunk(arr, size) {
+  // Break it up.
+  z = [];
+  
+  for(i=0; i<arr.length/size; i++) {
+    z[i]=arr.slice(i*size, (i+1)*size);
+  }
+
+  return z;
+}
+
+chunk(['a', 'b', 'c', 'd'], 2);
