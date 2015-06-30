@@ -1,0 +1,19 @@
+function end(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+  var z = str.split(" ");
+  
+  if(str.substring(str.length - 1, str.length)===target){
+    return true;
+  }
+  else if(z[z.length - 1]===target) {
+    return true;
+  }
+
+  else {
+    return false;
+  }
+
+}
+
+end('Bastian', 'an');
