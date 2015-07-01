@@ -1,0 +1,17 @@
+function where(arr, num) {
+  // Find my place in this sorted array.
+  z = arr.sort(function(a,b){return a-b;});
+  
+  for(var i=0; i<z.length; i++) {
+    if(num <= z[i]) {
+      return i;
+    }
+  }
+  
+  if(num>z[z.length-1]){
+    return z.length;
+  }
+
+}
+
+where([40, 60], 50);
