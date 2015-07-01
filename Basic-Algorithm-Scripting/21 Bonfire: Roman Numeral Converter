@@ -1,0 +1,17 @@
+function convert(num) {
+
+   var number = [100, 90, 50, 40, 10, 9, 5, 4, 1];
+   var roman = ["C","XC","L", "XL", "X", "IX", "V", "IV", "I"];
+   var n = "";
+
+   for(var i=0; i<number.length; i++) {
+      while(num >= number[i]) {
+         n += roman[i];
+         num -= number[i];
+      }
+   }
+  
+ return n;
+}
+
+convert(36);
