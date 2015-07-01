@@ -1,0 +1,12 @@
+function destroyer(arr,first,second) {
+  // Remove all the values
+  z = arr.filter(function(a) {
+    if( a != first && a != second) {
+      return a;
+    }
+  });
+  
+  return z;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
