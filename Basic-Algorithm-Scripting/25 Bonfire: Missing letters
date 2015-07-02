@@ -1,0 +1,19 @@
+function fearNotLetter(str) {
+  
+  var code = [];
+  var z = 0;
+  
+  for(i=0; i<str.length; i++) {
+    code[i] = str.charCodeAt(i);
+  }
+  
+  for(i=1; i<code.length; i++) {
+    if(code[i] - code[i-1] !== 1) {
+      z = code[i] - 1;
+      return String.fromCharCode(z);
+    }
+  }
+  
+}
+
+fearNotLetter('abce');
