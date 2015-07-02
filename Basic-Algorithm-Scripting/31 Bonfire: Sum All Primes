@@ -1,0 +1,30 @@
+function isPrime(num) {
+
+   var i = 2;
+
+   while(i<=num) {
+      if(i===num){
+         return true;
+      }
+      else if(num%i === 0){
+         return false;
+      }
+      else {
+         i++;
+      }
+   }
+}
+
+function sumPrimes(num) {
+
+   var z = 0;
+
+   for(var j = 0; j <= num; j++) {
+      if(isPrime(j)){
+         z += j;
+      }
+   }
+   return z;
+}
+
+sumPrimes(10);
