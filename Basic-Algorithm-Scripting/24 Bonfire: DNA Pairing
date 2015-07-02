@@ -1,0 +1,28 @@
+function pair(str) {
+  
+  str = str.split("");
+  
+  for(i=0; i<str.length; i++) {
+
+    if (str[i] === "A"){
+      str[i] = str[i].split("");
+      z = str[i].push("T");
+    }
+    else if (str[i] === "T"){
+      str[i] = str[i].split("");
+      z = str[i].push("A");
+    }
+    else if (str[i] === "C"){
+      str[i] = str[i].split("");
+      z = str[i].push("G");
+    }
+    else {
+      str[i] = str[i].split("");
+      z = str[i].push("C");
+    }
+  }
+  
+ return str;
+}
+
+pair("TTGAG");
