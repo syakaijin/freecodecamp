@@ -1,15 +1,12 @@
 function sumFibs(num) {
   
   var fib = [1,1];
-  var z=0;
+  var z= 0;
+  var i = 2;
   
-  for(i=2; i<num; i++) {
-    
+  while(i<num) {
     fib[i] = fib[i-1] + fib[i-2];
-    
-    if(fib[i] > num) {
-      break;
-    }
+    i++;
   }
   
   for(i=0; i<fib.length; i++) {
@@ -17,9 +14,7 @@ function sumFibs(num) {
       z += fib[i];
     }
   }
-  
   return z;
-  
 }
 
 sumFibs(4);
