@@ -1,0 +1,23 @@
+function spinalCase(str) {
+
+  if(str.indexOf(" ") > -1) {
+    str = str.split(" ");
+  }
+  else if(str.indexOf("_") > -1) {
+    str = str.split("_");
+  }
+  else {
+    str = str.split(/(?=[A-Z])/);
+  }
+  
+  
+  for(i=0; i<str.length; i++) {
+    str[i] = str[i].toLowerCase();
+  }
+  
+  str = str.join("-");
+  
+  return str;
+}
+
+spinalCase('thisIsSpinalTap');
