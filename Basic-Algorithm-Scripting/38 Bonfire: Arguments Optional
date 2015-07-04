@@ -1,0 +1,17 @@
+function add() {  
+  if (!arguments[1] && typeof arguments[0] === "number") {
+    var argOne = arguments[0];
+    var func = function(argTwo) {
+      if(typeof argTwo === "number"){
+        return argOne + argTwo;
+      }
+    }; 
+    return func;
+  }
+  if (typeof arguments[0] === "number" && typeof arguments[1] === "number") {
+    return arguments[0] + arguments[1];
+  }    
+return undefined;  
+}
+
+add(2);
