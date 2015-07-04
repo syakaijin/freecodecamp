@@ -1,0 +1,19 @@
+function palindrome(str) {
+  // Good luck!
+  var strNoSpace = str.replace(/ |,|\./g,"");
+  
+  if(strNoSpace.toLowerCase().split("").reverse().join("")===strNoSpace.toLowerCase()){
+    return true;
+  }
+
+  else {
+    return false;
+  }
+  
+}
+
+var i="i am";
+var j=i.replace(" ","");
+console.log(j);
+
+palindrome("never odd or even");
