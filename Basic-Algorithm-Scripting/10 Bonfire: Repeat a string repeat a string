@@ -1,0 +1,12 @@
+function repeat(str, num) {
+  // repeat after me
+  var z = [];
+  
+  for(i=0; i<num; i++) {
+    z[i] = str
+  }
+  
+  return z.join("");
+}
+
+repeat('abc', -3);
