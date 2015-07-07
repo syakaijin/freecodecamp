@@ -1,0 +1,57 @@
+function telephoneCheck(str) {
+  
+  var str2 = str.replace(/-|\s/g,"");
+  
+  //case 1: if contains parenthesis
+  if(str.indexOf("(") !== -1 || str.indexOf(")") !== -1){
+    
+    if(str2.indexOf(")") - str2.indexOf("(") === 4){
+      if(str2.length === 12) {
+        return true;
+      }
+      else if(str2.length === 13 && str[0] === "1") {
+        return true;
+      }
+      else {
+        return false;
+      }
+      
+    }
+    
+    else {
+      return false;
+    }
+    
+  }
+  
+  
+  //case 2: if contains no parenthesis
+  else {
+    
+    
+    var num = str.replace(/\(|\)|\s/g,"");
+    var regexp =/[abc]/g;
+
+    //check if num contains alphabet or starts with "-"
+    if(num.search(regexp) !== -1 || num[0] === "-"){
+      return false;
+    }
+
+    //discard "-" from num 
+    var num2 = num.replace(/-/g,"");
+
+    //check if num2 is 10 elements ends with number
+    if(num2.length === 10 && str[str.length-1].match(/[0-9]/)){
+      return true;
+    }
+
+    //check if num2 is 11element and starts with 1
+    if(num2.length === 11 && num2[0] === "1"){
+      return true;
+    }
+
+    return false;
+  }
+}
+
+telephoneCheck("(6505552368)");
